@@ -10,6 +10,8 @@ export default {
         'DM': ['DM Sans', 'serif', ]
         
       },
+      
+      
     },
   },
   plugins: [],

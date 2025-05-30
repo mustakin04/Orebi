@@ -1,0 +1,13 @@
+.custom-dots-container {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10px;
+}
+
+.custom-dots {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+}

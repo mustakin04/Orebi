@@ -2,16 +2,28 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './Component/Navbar/Navbar'
-import Header from './Component/Header/Header'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router";
+import Home from './Pages/Home';
+import RootLayout from './Layouts/RootLayout';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: RootLayout,
+    children: [
+      { index: true, Component: Home },
+      { path: "/", Component: Home },
+    ],
+  },
+]);
   return (
     <>
-      <Navbar></Navbar>
-      <Header></Header>
+     <RouterProvider router={router} />
     </>
   )
 }

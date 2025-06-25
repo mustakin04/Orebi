@@ -17,7 +17,7 @@ const Advertise = () => {
               <div className="">
                 <img src={ad2} alt="" />
               </div>
-              <div>
+              <div className="w-full mt-[40px]">
                 <img src={ad3} alt="" />
               </div>
             </div>

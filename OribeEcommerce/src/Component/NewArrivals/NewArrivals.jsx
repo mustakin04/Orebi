@@ -1,21 +1,30 @@
 import React from "react";
 import Container from "../Container/Container";
-
-import new2 from "../../assets/new2.png"
-import new3 from "../../assets/new3.png"
-import new4 from "../../assets/new4.png"
 import Product from "../Product/Product";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 const NewArrivals = ({ tittle }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1
+  };
   return (
     <Container className="my-[48px]">
       <div className="font-DM font-bold text-[39px] text-[#262636] ">
         {tittle}
       </div>
-      <div className="flex justify-between mt-[20px]">
-        <Product badge={false}></Product>
-        <Product badge={true}></Product>
-        <Product badge={false}></Product>
-        <Product badge={true}></Product>
+      <div className="  mt-[20px]">
+        <Slider {...settings}>
+          <Product badge={false}></Product>
+          <Product badge={true}></Product>
+          <Product badge={false}></Product>
+          <Product badge={true}></Product>
+        </Slider>
       </div>
     </Container>
   );

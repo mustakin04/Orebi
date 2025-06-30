@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import Home from './Pages/Home';
 import RootLayout from './Layouts/RootLayout';
+import Products from './Pages/Products/Products';
 
 
 function App() {
@@ -18,6 +19,14 @@ function App() {
     children: [
       { index: true, Component: Home },
       { path: "/", Component: Home },
+    ],
+  },
+  {
+    path: "/",
+    Component: RootLayout,
+    children: [
+      { index: true, Component: Products },
+      { path: "/products", Component: Products },
     ],
   },
 ]);

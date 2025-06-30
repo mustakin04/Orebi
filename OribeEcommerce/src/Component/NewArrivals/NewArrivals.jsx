@@ -4,14 +4,16 @@ import Product from "../Product/Product";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import SampleNetArrow from "../SampleNetArrow/SampleNetArrow";
 
 const NewArrivals = ({ tittle }) => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+     nextArrow: <SampleNetArrow />,
   };
   return (
     <Container className="my-[48px]">

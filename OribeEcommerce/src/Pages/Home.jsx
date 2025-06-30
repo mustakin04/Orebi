@@ -11,6 +11,7 @@ const Home = () => {
         <AdditonalInfo></AdditonalInfo>
         <Advertise></Advertise>
         <NewArrivals tittle="New Arrivals"></NewArrivals>
+        
     </div>
   )
 }
